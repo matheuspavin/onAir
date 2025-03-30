@@ -1,12 +1,18 @@
-import { Controller, Get } from '@nestjs/common';
-import { AppService } from './game.service';
+import { Body, Controller, Get, Post } from '@nestjs/common';
+import { GameService } from './game.service';
+import { GameInputDto } from './game.dto';
 
 @Controller()
-export class AppController {
-  constructor(private readonly appService: AppService) {}
+export class GameController {
+  constructor(private readonly gameService: GameService) { }
 
-  @Get()
-  getHello(): string {
-    return this.appService.getHello();
+  @Post('evaluate')
+  evaluateGame(@Body() body: GameInputDto) {
+    return this.gameService.evaluateGame(body);
+  }
+
+  @Get('completed')
+  getCompletedGames() {
+    return this.gameService.getCompletedGames();
   }
 }

@@ -3,9 +3,9 @@ import type { Config } from 'jest';
 const config: Config = {
   preset: 'ts-jest',
   testEnvironment: 'node',
-  setupFiles: ['<rootDir>/../jest.setup.ts'],
+  setupFiles: ['<rootDir>/jest.setup.ts'],
   moduleFileExtensions: ['ts', 'js', 'json'],
-  rootDir: 'src',
+  rootDir: '.',
 };
 
 export default config;

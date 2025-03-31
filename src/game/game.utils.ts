@@ -11,7 +11,7 @@ export function checkWinner(grid: string[][]): Player | null {
     }
     const n = grid.length;
     const isWinningLine = (cells: string[]): boolean =>
-        cells.every((cell) => cell && cell === cells[0]);
+        cells.length === n && cells.every(cell => cell && cell === cells[0]);
 
     // Check rows and columns
     for (let i = 0; i < n; i++) {

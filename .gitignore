@@ -137,3 +137,8 @@ dist
 
 # Infile game store
 src/game/games.json
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml

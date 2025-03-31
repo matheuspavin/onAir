@@ -6,6 +6,7 @@ export interface GameInput {
 }
 
 export interface GameResult extends GameInput {
+    id: string;
     winner: Player | null;
     createdAt: Date;
 }

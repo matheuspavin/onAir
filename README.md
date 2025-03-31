@@ -26,7 +26,7 @@ This project is a backend game management system for playing and tracking **Tic 
 
 ---
 
-## 📦 Installation
+## Installation
 
 ```bash
 # Clone the repository

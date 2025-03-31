@@ -5,7 +5,7 @@ describe('checkWinner', () => {
     const grid = [
       ['X', 'X', 'X'],
       ['O', '', 'O'],
-      ['', '', '']
+      ['', '', ''],
     ];
     expect(checkWinner(grid)).toBe('X');
   });
@@ -14,7 +14,7 @@ describe('checkWinner', () => {
     const grid = [
       ['O', 'X', ''],
       ['O', 'X', ''],
-      ['O', '', 'X']
+      ['O', '', 'X'],
     ];
     expect(checkWinner(grid)).toBe('O');
   });
@@ -23,7 +23,7 @@ describe('checkWinner', () => {
     const grid = [
       ['X', '', 'O'],
       ['O', 'X', ''],
-      ['O', '', 'X']
+      ['O', '', 'X'],
     ];
     expect(checkWinner(grid)).toBe('X');
   });
@@ -32,7 +32,7 @@ describe('checkWinner', () => {
     const grid = [
       ['X', 'O', 'X'],
       ['X', 'O', 'O'],
-      ['O', 'X', 'X']
+      ['O', 'X', 'X'],
     ];
     expect(checkWinner(grid)).toBe(null);
   });
@@ -42,7 +42,7 @@ describe('checkWinner', () => {
       ['O', 'X', '', ''],
       ['O', 'X', '', ''],
       ['O', 'X', '', ''],
-      ['O', '', '', '']
+      ['O', '', '', ''],
     ];
     expect(checkWinner(grid)).toBe('O');
   });

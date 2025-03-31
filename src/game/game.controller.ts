@@ -4,7 +4,7 @@ import { GameInputDto } from './game.dto';
 
 @Controller()
 export class GameController {
-  constructor(private readonly gameService: GameService) { }
+  constructor(private readonly gameService: GameService) {}
 
   @Post('evaluate')
   evaluateGame(@Body() body: GameInputDto) {

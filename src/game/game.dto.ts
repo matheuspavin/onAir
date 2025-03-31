@@ -1,6 +1,10 @@
 import { IsArray, ArrayMinSize, Validate, IsInt } from 'class-validator';
 import { Type } from 'class-transformer';
-import { ValidatorConstraint, ValidatorConstraintInterface, ValidationArguments } from 'class-validator';
+import {
+  ValidatorConstraint,
+  ValidatorConstraintInterface,
+  ValidationArguments,
+} from 'class-validator';
 
 const AllowedValues = ['X', 'O', ''];
 
@@ -12,10 +16,10 @@ export class IsValidGrid implements ValidatorConstraintInterface {
     return (
       size > 0 &&
       grid.every(
-        row =>
+        (row) =>
           Array.isArray(row) &&
           row.length === size &&
-          row.every(cell => AllowedValues.includes(cell))
+          row.every((cell) => AllowedValues.includes(cell)),
       )
     );
   }

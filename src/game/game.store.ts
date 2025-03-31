@@ -19,9 +19,9 @@ export function loadGames(): GameResult[] {
 }
 
 export async function saveGame(game: GameResult) {
-    console.log(game)
+  console.log(game);
   const current = await loadGames();
-  console.log('Checking the games for debug: ', current)
+  console.log('Checking the games for debug: ', current);
   current.push(game);
   fs.writeFileSync(DB_FILE, JSON.stringify(current, null, 2));
 }

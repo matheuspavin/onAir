@@ -13,9 +13,9 @@ describe('GameService', () => {
       grid: [
         ['X', 'X', 'X'],
         ['O', '', 'O'],
-        ['', '', '']
+        ['', '', ''],
       ],
-      gridSize: 3
+      gridSize: 3,
     };
 
     const result = service.evaluateGame(input);
@@ -31,9 +31,9 @@ describe('GameService', () => {
       grid: [
         ['X', 'O', 'X'],
         ['O', 'X', 'O'],
-        ['O', 'X', 'O']
+        ['O', 'X', 'O'],
       ],
-      gridSize: 3
+      gridSize: 3,
     };
 
     const result = service.evaluateGame(input);

@@ -46,4 +46,12 @@ describe('checkWinner', () => {
     ];
     expect(checkWinner(grid)).toBe('O');
   });
+
+  it('fails validation on a non-square grid', () => {
+    const grid = [
+      ['O', 'X', ''],
+      ['O', 'X', ''],
+    ];
+    expect(() => checkWinner(grid)).toThrowError('Invalid grid: must be a square matrix');
+  });
 });

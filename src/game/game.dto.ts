@@ -29,7 +29,7 @@ export class IsValidGrid implements ValidatorConstraintInterface {
   }
 }
 
-export class GameInputDto {
+export class GameDto {
   @IsArray()
   @ArrayMinSize(1)
   @Validate(IsValidGrid)

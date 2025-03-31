@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { GameInput, GameResult } from './game.types';
 import { checkWinner, isBoardFull } from './game.utils';
 import { v4 as uuidv4 } from 'uuid';
-import { saveGame, loadGames } from './game.store';
+import { saveGame, loadGames, deleteGames } from './game.store';
 
 @Injectable()
 export class GameService {
@@ -23,5 +23,10 @@ export class GameService {
 
   getCompletedGames(): GameResult[] {
     return loadGames();
+  }
+
+  deleteGamesFile(): string {
+    deleteGames();
+    return 'Games deleted';
   }
 }

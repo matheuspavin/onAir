@@ -6,14 +6,16 @@ export class AiService {
   private openai: OpenAI;
 
   constructor() {
-    this.openai = new OpenAI({
-      apiKey: process.env.OPENAI_API_KEY,
-    });
+    const apiKey = process.env.OPENAI_API_KEY;
+    if (apiKey) {
+      this.openai = new OpenAI({ apiKey });
+    }
   }
 
   async getNextMove(grid: string[][], player: string): Promise<{ row: number; col: number }> {
     const flatGrid = grid.map(row => row.join(' | ')).join('\n');
 
+    //Prompting is a hard thing, but I asked chatGPT to help me creating this prompt.
     const prompt = `
 You're playing Tic Tac Toe on a ${grid.length}x${grid.length} board.
 The board looks like this (empty = ""):

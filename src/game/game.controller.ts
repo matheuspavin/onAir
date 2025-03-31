@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Post } from '@nestjs/common';
+import { Body, Controller, Get, HttpException, Post } from '@nestjs/common';
 import { GameService } from './game.service';
 import { GameDto } from './game.dto';
 import { AiService } from 'src/ai/ai.service';
@@ -22,6 +22,9 @@ export class GameController {
 
   @Post('ai-move')
   async getAiMove(@Body() body: { grid: string[][]; player: string }) {
+    if (process.env.OPENAI_API_KEY === undefined) {
+      throw new HttpException('OpenAI API key is missing', 503);
+    }
     return this.aiService.getNextMove(body.grid, body.player);
   }
 

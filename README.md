@@ -1,31 +1,44 @@
-## Project setup
+# Tic Tac Toe Game API
+
+This project is a backend game management system for playing and tracking **Tic Tac Toe** games, built with **NestJS**, **TypeScript**, and **OpenAI integration** for AI-powered moves.
+
+> 🧪 Created as part of a technical assessment. Timeboxed to 6 hours.
+
+---
+
+## Features
+
+- Evaluate Tic Tac Toe game state and determine a winner
+- Store completed games in a JSON-based datastore
+- Retrieve a list of past completed games
+- Supports dynamic grid sizes (e.g., 3x3, 4x4, 5x5)
+- Optional: Play against an AI (powered by OpenAI)
+
+---
+
+## Tech Stack
+
+- **Node.js** + **NestJS**
+- **TypeScript**
+- **In-memory & file-based JSON storage**
+- **OpenAI GPT integration** (optional)
+- **Jest** for unit testing
+
+---
+
+## 📦 Installation
 
 ```bash
-$ yarn install
-```
+# Clone the repository
+git clone https://github.com/your-username/on-air-tic-tac-toe.git
+cd on-air-tic-tac-toe
 
-## Compile and run the project
+# Install dependencies
+yarn
 
-```bash
-# development
-$ yarn run start
+# Create a `.env` file (if using AI)
+cp .env.example .env
+# Add your OPENAI_API_KEY to .env
 
-# watch mode
-$ yarn run start:dev
-
-# production mode
-$ yarn run start:prod
-```
-
-## Run tests
-
-```bash
-# unit tests
-$ yarn run test
-
-# e2e tests
-$ yarn run test:e2e
-
-# test coverage
-$ yarn run test:cov
-```
+# Run the app
+yarn start:dev

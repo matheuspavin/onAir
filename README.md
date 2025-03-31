@@ -2,8 +2,6 @@
 
 This project is a backend game management system for playing and tracking **Tic Tac Toe** games, built with **NestJS**, **TypeScript**, and **OpenAI integration** for AI-powered moves.
 
-> 🧪 Created as part of a technical assessment. Timeboxed to 6 hours.
-
 ---
 
 ## Features
@@ -12,7 +10,7 @@ This project is a backend game management system for playing and tracking **Tic 
 - Store completed games in a JSON-based datastore
 - Retrieve a list of past completed games
 - Supports dynamic grid sizes (e.g., 3x3, 4x4, 5x5)
-- Optional: Play against an AI (powered by OpenAI)
+- Optional: Play against an AI (powered by OpenAI - requires a aditional key that should be added to .env)
 
 ---
 
@@ -20,7 +18,7 @@ This project is a backend game management system for playing and tracking **Tic 
 
 - **Node.js** + **NestJS**
 - **TypeScript**
-- **In-memory & file-based JSON storage**
+- **file-based JSON storage**
 - **OpenAI GPT integration** (optional)
 - **Jest** for unit testing
 
